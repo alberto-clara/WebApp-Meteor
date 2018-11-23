@@ -16,16 +16,47 @@ export const StuffSchema = new SimpleSchema({
     max: 20,
     autoform: {
       group: 'Stuff',
-      placeholder: 'Bicycle',
+      placeholder: 'John',
     },
   },
-  quantity: {
-    label: 'Quantity',
-    type: Number,
+  last: {
+    label: 'Last',
+    type: String,
     optional: false,
+    max: 20,
     autoform: {
       group: 'Stuff',
-      placeholder: '3',
+      placeholder: 'Test',
+    },
+  },
+  address: {
+    label: 'Address',
+    type: String,
+    optional: false,
+    max: 100,
+    autoform: {
+      group: 'Stuff',
+      placeholder: '123 Lane St. HiddenVille, IDK. 123456',
+    },
+  },
+  phone: {
+    label: 'Phone',
+    type: String,
+    optional: false,
+    max: 15,
+    autoform: {
+      group: 'Stuff',
+      placeholder: '360-000-0000',
+    },
+  },
+  email: {
+    label: 'Email',
+    type: String,
+    optional: false,
+    max: 30,
+    autoform: {
+      group: 'Stuff',
+      placeholder: 'john.test@email.com',
     },
   },
 });
