@@ -5,7 +5,33 @@
     {{#if canShow}}
       {{> UI.contentBlock }}
     {{else}}
-      {{> UI.contentBlock }}
+      <div style="padding-top: 40px" class="ui text container">
+        <div class="ui text container">
+          <table style="margin-top: 20px" class="ui celled table">
+            <thead>
+            <tr>
+              <th>First</th>
+              <th>Last</th>
+              <th>Address</th>
+              <th>Phone</th>
+              <th>Email</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {{#each stuff in stuffList}}
+              <tr>
+                <td>{{stuff.first}}</td>
+                <td>{{stuff.last}}</td>
+                <td>{{stuff.address}}</td>
+                <td>{{stuff.phone}}</td>
+                <td>{{stuff.email}}</td>
+              </tr>
+            {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
       <!--<div style="padding-top: 40px" class="ui text container">-->
         <!--<p>You are not authorized to view this page.</p>-->
         <!--<p>Please login.</p>-->

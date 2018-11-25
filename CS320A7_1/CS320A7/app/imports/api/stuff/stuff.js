@@ -16,7 +16,7 @@ export const StuffSchema = new SimpleSchema({
     max: 20,
     autoform: {
       group: 'Stuff',
-      placeholder: 'John',
+      placeholder: 'First Name',
     },
   },
   last: {
@@ -26,7 +26,7 @@ export const StuffSchema = new SimpleSchema({
     max: 20,
     autoform: {
       group: 'Stuff',
-      placeholder: 'Test',
+      placeholder: 'Last Name',
     },
   },
   address: {
@@ -36,7 +36,7 @@ export const StuffSchema = new SimpleSchema({
     max: 100,
     autoform: {
       group: 'Stuff',
-      placeholder: '123 Lane St. HiddenVille, IDK. 123456',
+      placeholder: 'Address',
     },
   },
   phone: {
@@ -46,7 +46,7 @@ export const StuffSchema = new SimpleSchema({
     max: 15,
     autoform: {
       group: 'Stuff',
-      placeholder: '360-000-0000',
+      placeholder: 'Telephone',
     },
   },
   email: {
@@ -56,7 +56,7 @@ export const StuffSchema = new SimpleSchema({
     max: 30,
     autoform: {
       group: 'Stuff',
-      placeholder: 'john.test@email.com',
+      placeholder: 'Email',
     },
   },
 });

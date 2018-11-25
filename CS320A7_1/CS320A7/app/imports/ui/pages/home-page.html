@@ -1,14 +1,39 @@
 <template name="Home_Page">
   <div class="ui middle aligned centered grid text container">
 
-    <div class="four wide column">
-      <img class="ui small circular image" src="/images/meteor-logo.png"/>
-    </div>
+    {{#If_Logged_In}}
+      <div class="ui text container">
+        {{#if Template.subscriptionsReady}}
+          <table style="margin-top: 20px" class="ui celled table">
+            <thead>
+            <tr>
+              <th>First</th>
+              <th>Last</th>
+              <th>Address</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Edit</th>
+            </tr>
+            </thead>
 
-    <div class="eight wide column">
-      <h1>Welcome to this template</h1>
-      <p>Now get to work and modify this app!</p>
-    </div>
+            <tbody>
+            {{#each stuff in stuffList}}
+              <tr>
+                <td>{{stuff.first}}</td>
+                <td>{{stuff.last}}</td>
+                <td>{{stuff.address}}</td>
+                <td>{{stuff.phone}}</td>
+                <td>{{stuff.email}}</td>
+                <td><a href="{{pathFor 'Edit_Stuff_Page' _id=stuff._id}}">Edit</a></td>
+              </tr>
+            {{/each}}
+            </tbody>
+          </table>
+        {{else}}
+          {{> Loading}}
+        {{/if}}
+      </div>
+    {{/If_Logged_In}}
 
   </div>
 </template>
