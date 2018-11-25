@@ -1,5 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
+import { Stuff } from '../../api/stuff/stuff.js';
+
 
 /* eslint-disable object-shorthand */
 
@@ -15,5 +17,9 @@ Template.If_Logged_In.helpers({
    */
   canShow: function canShow() {
     return !!Meteor.user();
+  },
+
+  stuffList() {
+    return Stuff.find();
   },
 });

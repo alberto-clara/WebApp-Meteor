@@ -1,9 +1,11 @@
 <template name="Header">
-  <div class="ui top center aligned grid">
-    <img class="centered" src="/images/1024px-Friends_logo.png">
+  <div class="header">
+  <div class="ui borderless fluid image">
+    <img src="/images/1024px-Friends_logo.png">
   </div>
-  <div class="ui borderless inverted menu">
-    <div class="ui container">
+  </div>
+    <div class="ui borderless inverted blue menu">
+  <div class="ui container">
       <a class="item" href="{{pathFor 'Home_Page'}}"><h1>Friends</h1></a>
       {{#if currentUser}}
         <a class="{{ isActiveRoute 'Add_Stuff_Page'}} item" href="{{ pathFor 'Add_Stuff_Page' }}">Add Contact </a>

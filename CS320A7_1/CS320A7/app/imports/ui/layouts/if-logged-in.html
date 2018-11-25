@@ -1,6 +1,7 @@
 <template name="If_Logged_In">
   {{#if authInProcess}}
     <p>loading ...</p>
+
   {{else}}
     {{#if canShow}}
       {{> UI.contentBlock }}
@@ -32,10 +33,6 @@
           </table>
         </div>
       </div>
-      <!--<div style="padding-top: 40px" class="ui text container">-->
-        <!--<p>You are not authorized to view this page.</p>-->
-        <!--<p>Please login.</p>-->
-      <!--</div>-->
     {{/if}}
   {{/if}}
 </template>

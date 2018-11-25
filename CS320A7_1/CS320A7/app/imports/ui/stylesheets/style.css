@@ -1,7 +1,11 @@
 body {
-  padding-top: 61px;  /* Move body of page below navbar. */
+  padding-top: 0;  /* Move body of page below navbar. */
 }
 
 .login-link-text {
   color: white !important;
+}
+
+.button {
+  color: white;
 }
