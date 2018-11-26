@@ -1,19 +1,19 @@
 <template name="Home_Page">
-  <div class="ui middle aligned centered grid text container">
+  <div class="ui middle aligned fluid container">
 
     {{#If_Logged_In}}
-      <div class="ui text container">
+      <!--<div class="ui text container">-->
         {{#if Template.subscriptionsReady}}
-          <table style="margin-top: 20px" class="ui celled table">
+          <table align="center" style="width:800px; margin-top: 20px;" class="ui celled table">
             <thead>
-            <tr>
-              <th>First</th>
-              <th>Last</th>
-              <th>Address</th>
-              <th>Phone</th>
-              <th>Email</th>
-              <th>Edit</th>
-            </tr>
+              <tr>
+                <th>First</th>
+                <th>Last</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Edit</th>
+              </tr>
             </thead>
 
             <tbody>
@@ -32,7 +32,7 @@
         {{else}}
           {{> Loading}}
         {{/if}}
-      </div>
+      <!--</div>-->
     {{/If_Logged_In}}
 
   </div>
