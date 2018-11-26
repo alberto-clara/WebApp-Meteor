@@ -6,6 +6,17 @@ body {
   color: white !important;
 }
 
-.button {
-  color: white;
+/*.button {*/
+  /*color: white;*/
+/*}*/
+
+.label:before{
+  content:"*" ;
+  color:red
+}
+
+#p01 {
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
 }

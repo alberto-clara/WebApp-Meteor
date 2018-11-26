@@ -1,14 +1,68 @@
 <template name="Edit_Stuff_Page">
   {{#If_Logged_In}}
-    <div style="padding-top: 20px" class="ui text container">
-      {{> quickForm
-      collection=stuffCollection
-      template="semanticUI"
-      id="EditStuffForm"
-      type="update"
-      doc=getDoc
-      buttonContent="Update"
+    <!--<div style="padding-top: 30px" class="ui middle text container">-->
+      <!--<form class="ui form">-->
+        <!--<h4 class="ui dividing header">Add Contact</h4>-->
+        <!--<div class="two fields">-->
+          <!--<div class="field">-->
+            <!--<label>First Name</label>-->
+            <!--<input name="first-name" type="text" placeholder="First Name">-->
+          <!--</div>-->
+          <!--<div class="field">-->
+            <!--<label>Last Name</label>-->
+            <!--<input name="last-name" type="text" placeholder="Last Name">-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="field">-->
+          <!--<label>Address</label>-->
+          <!--<input name="Address" type="text" placeholder="Address">-->
+        <!--</div>-->
+        <!--<div class="two fields">-->
+          <!--<div class="field">-->
+            <!--<label>Phone</label>-->
+            <!--<input name="first-name" type="text" placeholder="Phone">-->
+          <!--</div>-->
+          <!--<div class="field">-->
+            <!--<label>Email</label>-->
+            <!--<input name="last-name" type="text" placeholder="Email">-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<button class="ui button" type="submit">Submit</button>-->
+      <!--</form>-->
+    <!--</div>-->
+
+    <div id="p01" class="ui container">
+      {{#autoForm
+          collection=stuffCollection
+          template="semanticUI"
+          id="EditStuffForm"
+          type="update"
+          doc=getDoc
+          buttonContent="Update"
       }}
+        <fieldset style="border-color: white">
+          <h4>Edit Contact</h4>
+          <div class="ui divider"></div>
+          <div class="ui grid">
+            <div class="eight wide column">
+              {{> afQuickField name='first'}}
+            </div>
+            <div class="eight wide column">
+              {{> afQuickField name='last'}}
+            </div>
+            <div class="sixteen wide column">
+              {{> afQuickField name='address'}}
+            </div>
+            <div class="eight wide column">
+              {{> afQuickField name='phone'}}
+            </div>
+            <div class="eight wide column">
+              {{> afQuickField name='email'}}
+            </div>
+          </div>
+        </fieldset>
+        <button onclick="location.href='http://localhost:3000/'" type="ui button" class="ui button">Update</button>
+      {{/autoForm}}
     </div>
   {{/If_Logged_In}}
 </template>
